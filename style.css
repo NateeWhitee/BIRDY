@@ -32,6 +32,7 @@ header button{
     color: #f4f4f9;
     text-align: center;
     font-size: 1.5em;
+    font-weight: lighter;
     line-height: 2;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -70,17 +71,20 @@ article h2 {
     letter-spacing: 2px;
 }
 
-#calender {
+.calender {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
-    width: 120%;
-    margin: 0 -10%;
+    width: 166.8%;
+    margin: 0 -33.2%;
 }
 
-#calender p {
-    outline: 4px solid #3f6268;
+.calender p {
     background-color: #a390e4;
+}
+
+#mobile_calender {
+    display: none;
 }
 
 article ol li{
@@ -110,4 +114,60 @@ article ol li ul li {
 @font-face {
     font-family: Site_Title;
     src: url(Home-Minimalist.otf);
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        padding: 0;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header button {
+        border-radius: 0;
+        border: none;
+        margin: 0;
+    }
+
+    header nav {
+        column-gap: 0;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+    @media only screen and (max-width: 600px) {
+    
+        header h1 {
+            padding: 10px 0;
+        }
+    
+        header nav {
+            grid-template-columns: 1fr;
+        }
+    
+        header button:hover {
+            background-color: #13505b;
+            padding: 0;
+        }
+    
+        article {
+            width: 80%;
+            margin: 0 10%;
+        }
+    
+        #desktop_tablet_calender {
+            display: none;
+        }
+    
+        #mobile_calender {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+            margin: 0;
+        }
+    }
 }

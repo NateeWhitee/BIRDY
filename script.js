@@ -1,6 +1,8 @@
 let operating_hours = ['CLOSED','10am - 5pm', '10am - 5pm', '10am - 5pm', '10am - 5pm', '10am - 5pm', 'CLOSED'];
 for (i = 0; i < operating_hours.length; i++) {
-    document.querySelector(`#operating_hours${i}`).innerHTML = `${operating_hours[i]}`
+    document.querySelector(`#operating_hours${i}_desktop`).innerHTML = `${operating_hours[i]}`;
+    document.querySelector(`#operating_hours${i}_mobile`).innerHTML = `${operating_hours[i]}`;
+    document.querySelector(`#operating_hours${i}_mobile`).style.backgroundColor = '#28afb0'
 }
 
 document.addEventListener('click', (e) => {
