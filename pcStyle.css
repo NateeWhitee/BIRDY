@@ -1,0 +1,43 @@
+header nav {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 25px;
+}
+
+header nav img, header nav h1 {
+    grid-column: span 3;
+    padding: 5vh 0;
+    font-size: 32pt;
+    width: 60%;
+}
+
+header nav h1 {
+    background-color: var(--secondaryBackground);
+    border-radius: 25px;
+}
+
+header nav i {
+    visibility: hidden;
+}
+
+header nav button:hover {
+    background-color: var(--primaryBackground);
+    transition-duration: .1s;
+}
+
+main {
+    width: 60%;
+    margin: 0 20%;
+    border-right: solid 5px #333;
+    border-left: solid 5px #333;
+    border-top: solid 5px #333;
+}
+
+main article {
+    width: 60%;
+    margin: 0 20%;
+    padding: 25px 0;
+}
+
+.mobileToTopBtn {
+    display: none;
+}
