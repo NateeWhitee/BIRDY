@@ -4,118 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Birdie | Med Spa</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 950px)" href="/css/pcStyle.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 651px) and (max-width: 949px)" href="/css/tabletStyle.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="/css/mobileStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Birdie | Home</h1>
         <nav>
-            <button id="Home_Button" class="nav_button">Home</button>
-            <button id="Hours_Button" class="nav_button">Hours of Operation</button>
-            <button id="Quotes_Button" class="nav_button">Quotes</button>
-            <button id="Mission_Button" class="nav_button">Mission Statement</button>
-            <button id="FAQ_Button" class="nav_button">FAQ</button>
+            <img src="humming_bird.png">
+            <h1>BIRDY</h1>
+            <i id="menu_access_btn" style="font-size: 32px;line-height: 2;" class="fa fa-bars" aria-hidden="true"></i>
+            <button id="BotoxEduBtn" class="menu_option">Botox Edu.</button>
+            <button id="AppointmentsBtn" class="menu_option">Appointments</button>
+            <button id="AboutTheOwnersBtn" class="menu_option">About the Owners</button>
+            <button id="FAQBtn" class="menu_option">FAQ</button>
         </nav>
     </header>
-
     <main>
-        <article>
-            <h2 id="Home_Article">Home</h2>
-            <p>Brief overview of company services as well as some benefits. Essentially, the sales pitch.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Lacus laoreet non curabitur gravida. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis. Lobortis scelerisque fermentum dui faucibus in. Viverra vitae congue eu consequat ac felis donec et. Sed id semper risus in hendrerit gravida rutrum.</p>
-            <p>Commodo nulla facilisi nullam vehicula ipsum a. At auctor urna nunc id cursus metus aliquam eleifend. Nisl rhoncus mattis rhoncus urna neque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Amet facilisis magna etiam tempor orci eu lobortis. Amet porttitor eget dolor morbi. Semper eget duis at tellus at urna condimentum. Tristique senectus et netus et malesuada. Tempor id eu nisl nunc mi. Posuere morbi leo urna molestie at elementum eu. Adipiscing vitae proin sagittis nisl rhoncus mattis. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Eget duis at tellus at urna condimentum mattis pellentesque. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Rutrum quisque non tellus orci ac auctor augue mauris. Morbi tempus iaculis urna id volutpat. Vitae aliquet nec ullamcorper sit amet. Ligula ullamcorper malesuada proin libero.</p>
+        <article id="BotoxEduArticle">
+            <h1>Botox Education</h1>
+            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
         </article>
-        <article id="Hours_Article">
-            <h2>Hours of Operation</h2>
-            <div id="desktop_tablet_calender" class="calender">
-                <p>Sunday</p>
-                <p>Monday</p>
-                <p>Tuesday</p>
-                <p>Wednesday</p>
-                <p>Thursday</p>
-                <p>Friday</p>
-                <p>Saturday</p>
-                <p id="operating_hours0_desktop"></p>
-                <p id="operating_hours1_desktop"></p>
-                <p id="operating_hours2_desktop"></p>
-                <p id="operating_hours3_desktop"></p>
-                <p id="operating_hours4_desktop"></p>
-                <p id="operating_hours5_desktop"></p>
-                <p id="operating_hours6_desktop"></p>
-            </div>
-            <div id="mobile_calender" class="calender">
-                <p>Sunday</p>
-                <p id="operating_hours0_mobile"></p>
-                <p>Monday</p>
-                <p id="operating_hours1_mobile"></p>
-                <p>Tuesday</p>
-                <p id="operating_hours2_mobile"></p>
-                <p>Wednesday</p>
-                <p id="operating_hours3_mobile"></p>
-                <p>Thursday</p>
-                <p id="operating_hours4_mobile"></p>
-                <p>Friday</p>
-                <p id="operating_hours5_mobile"></p>
-                <p>Saturday</p>
-                <p id="operating_hours6_mobile"></p>
-            </div>
+        <article id="AppointmentsArticle">
+            <h1>Appointments</h1>
+            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
         </article>
-        <article>
-            <h2 id="Quotes_Article">Quotes</h2>
-            <p>Give information on each type of service with quotes.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Lacus laoreet non curabitur gravida. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis. Lobortis scelerisque fermentum dui faucibus in. Viverra vitae congue eu consequat ac felis donec et. Sed id semper risus in hendrerit gravida rutrum.</p>
-            <p>Commodo nulla facilisi nullam vehicula ipsum a. At auctor urna nunc id cursus metus aliquam eleifend. Nisl rhoncus mattis rhoncus urna neque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Amet facilisis magna etiam tempor orci eu lobortis. Amet porttitor eget dolor morbi. Semper eget duis at tellus at urna condimentum. Tristique senectus et netus et malesuada. Tempor id eu nisl nunc mi. Posuere morbi leo urna molestie at elementum eu. Adipiscing vitae proin sagittis nisl rhoncus mattis. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Eget duis at tellus at urna condimentum mattis pellentesque. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Rutrum quisque non tellus orci ac auctor augue mauris. Morbi tempus iaculis urna id volutpat. Vitae aliquet nec ullamcorper sit amet. Ligula ullamcorper malesuada proin libero.</p>
+        <article id="TheOwnersArticle">
+            <h1>The Owners</h1>
+            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
         </article>
-        <article>
-            <h2 id="Mission_Article">Mission Statement</h2>
-            <p>Pretty obvious what you should do here. Include pictures of yourselves to make it more personal.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Lacus laoreet non curabitur gravida. Amet facilisis magna etiam tempor orci eu lobortis elementum nibh. Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis. Lobortis scelerisque fermentum dui faucibus in. Viverra vitae congue eu consequat ac felis donec et. Sed id semper risus in hendrerit gravida rutrum.</p>
-            <p>Commodo nulla facilisi nullam vehicula ipsum a. At auctor urna nunc id cursus metus aliquam eleifend. Nisl rhoncus mattis rhoncus urna neque. Auctor neque vitae tempus quam pellentesque nec nam aliquam. Amet facilisis magna etiam tempor orci eu lobortis. Amet porttitor eget dolor morbi. Semper eget duis at tellus at urna condimentum. Tristique senectus et netus et malesuada. Tempor id eu nisl nunc mi. Posuere morbi leo urna molestie at elementum eu. Adipiscing vitae proin sagittis nisl rhoncus mattis. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Eget duis at tellus at urna condimentum mattis pellentesque. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Rutrum quisque non tellus orci ac auctor augue mauris. Morbi tempus iaculis urna id volutpat. Vitae aliquet nec ullamcorper sit amet. Ligula ullamcorper malesuada proin libero.</p>
-        </article>
-        <article>
-            <h2 id="FAQ_Article">FAQ</h2>
-            <ol>
-                <li>"Does it hurt?"
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 2
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 3
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 4
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 5
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 6
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-                <li>Question 7
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu.</li>
-                    </ul>
-                </li>
-            </ol>
+        <article id="FAQArticle">
+            <h1>FAQ</h1>
+            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
+            </p>
         </article>
     </main>
-    <img id="Scroll_To_Top_Button" src="scroll_to_top.png">
     <script src="script.js"></script>
 </body>
 </html>

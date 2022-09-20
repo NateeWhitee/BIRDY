@@ -1,40 +1,52 @@
-let operating_hours = ['CLOSED','10am - 5pm', '10am - 5pm', '10am - 5pm', '10am - 5pm', '10am - 5pm', 'CLOSED'];
-for (i = 0; i < operating_hours.length; i++) {
-    document.querySelector(`#operating_hours${i}_desktop`).innerHTML = `${operating_hours[i]}`;
-    document.querySelector(`#operating_hours${i}_mobile`).innerHTML = `${operating_hours[i]}`;
-    document.querySelector(`#operating_hours${i}_mobile`).style.backgroundColor = '#28afb0'
-}
+let menu_state = 'open';
+const NAV_OPTIONS = document.getElementsByClassName('menu_option')
 
-document.addEventListener('click', (e) => {
-    if (e.target.tagName == 'BUTTON') {
-        switch (e.target.id) {
-            case 'Home_Button':
-                document.querySelector('#Home_Article').scrollIntoView({ behavior: 'smooth'})
-                break;
-            case 'Hours_Button':
-                document.querySelector('#Hours_Article').scrollIntoView({ behavior: 'smooth'})
-                break;
-            case 'Quotes_Button':
-                document.querySelector('#Quotes_Article').scrollIntoView({ behavior: 'smooth'})
-                break;
-            case 'Mission_Button':
-                document.querySelector('#Mission_Article').scrollIntoView({ behavior: 'smooth'})
-                break;
-            case 'FAQ_Button':
-                document.querySelector('#FAQ_Article').scrollIntoView({ behavior: 'smooth'})
-                break;
+document.querySelector("#menu_access_btn").addEventListener("click", function() {
+    if (menu_state == 'open') {
+        console.log('closing menu...')
+        menu_state = 'closed';
+        document.getElementById('menu_access_btn').classList.remove('open_menu_icon');
+        document.getElementById('menu_access_btn').classList.add('close_menu_icon');
+        document.querySelector('main').classList.add('close_menu_main');
+        document.querySelector('main').classList.remove('open_menu_main');
+        for (option of NAV_OPTIONS) {
+            option.classList.add('close_menu_buttons');
+            option.classList.remove('open_menu_buttons');
+        }
+    } else {
+        console.log('opening menu...')
+        menu_state = 'open';
+        document.getElementById('menu_access_btn').classList.remove('close_menu_icon');
+        document.getElementById('menu_access_btn').classList.add('open_menu_icon');
+        document.querySelector('main').classList.add('open_menu_main');
+        document.querySelector('main').classList.remove('close_menu_main');
+        for (option of NAV_OPTIONS) {
+            option.classList.add('open_menu_buttons');
+            option.classList.remove('close_menu_buttons');
         }
     }
-    if (e.target.id == 'Scroll_To_Top_Button') {
-        window.scrollTo({top: 0, behavior: 'smooth'})
-    }
 });
 
-document.addEventListener('scroll', (e) => {
-    let scrollY = window.scrollY;
-    if (scrollY > 100) {
-        document.querySelector('#Scroll_To_Top_Button').style.display = 'block';
-    } else {
-        document.querySelector('#Scroll_To_Top_Button').style.display = 'none';
-    }
-});
+for (i = 0; i < NAV_OPTIONS.length; i++) {
+    NAV_OPTIONS[i].addEventListener("click", function(e) {
+        console.log(`Scrolling for ${e.target.id}`)
+        switch (e.target.id) {
+            case "BotoxEduBtn":
+                document.querySelector(`#BotoxEduArticle`).scrollIntoView({behavior: 'smooth'})
+                break;
+            case "AppointmentsBtn":
+                document.querySelector(`#AppointmentsArticle`).scrollIntoView({behavior: 'smooth'})
+                break;
+            case "AboutTheOwnersBtn":
+                document.querySelector(`#TheOwnersArticle`).scrollIntoView({behavior: 'smooth'})
+                break;
+            case "FAQBtn":
+                document.querySelector(`#FAQArticle`).scrollIntoView({behavior: 'smooth'})
+                break;
+        }
+    })
+}
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
