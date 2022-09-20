@@ -12,7 +12,8 @@
 }
 
 body {
-    background-color: var(--primaryBackground)
+    background-color: var(--primaryBackground);
+    overflow-x: hidden
 }
 
 header nav {
