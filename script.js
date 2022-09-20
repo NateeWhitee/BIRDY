@@ -5,7 +5,7 @@ document.querySelector("#menu_access_btn").addEventListener("click", function() 
     if (menu_state == 'open') {
         console.log('closing menu...')
         menu_state = 'closed';
-        window.navigator.vibrate(10, 10, 10, 10, 10);
+        window.navigator.vibrate([10, 10, 10, 10, 10]);
         document.getElementById('menu_access_btn').classList.remove('open_menu_icon');
         document.getElementById('menu_access_btn').classList.add('close_menu_icon');
         document.querySelector('main').classList.add('close_menu_main');
@@ -17,7 +17,7 @@ document.querySelector("#menu_access_btn").addEventListener("click", function() 
     } else {
         console.log('opening menu...')
         menu_state = 'open';
-        window.navigator.vibrate(10, 10, 10, 10, 10);
+        window.navigator.vibrate([10, 10, 10, 10, 10]);
         document.getElementById('menu_access_btn').classList.remove('close_menu_icon');
         document.getElementById('menu_access_btn').classList.add('open_menu_icon');
         document.querySelector('main').classList.add('open_menu_main');
@@ -46,11 +46,11 @@ for (i = 0; i < NAV_OPTIONS.length; i++) {
                 document.querySelector(`#FAQArticle`).scrollIntoView({behavior: 'smooth'})
                 break;
         }
-        window.navigator.vibrate(10, 10, 10);
+        window.navigator.vibrate([30, 10, 30]);
     })
 }
 
 function scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'});
-    window.navigator.vibrate(10, 10, 10);
+    window.navigator.vibrate([30, 10, 30]);
 }
