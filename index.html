@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale="1.0", minimum-scale="1.0", user-scalable="no">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 950px)" href="pcStyle.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 651px) and (max-width: 949px)" href="tabletStyle.css"/>
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="mobileStyle.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 950px)" href="/css/pcStyle.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 651px) and (max-width: 949px)" href="/css/tabletStyle.css"/>
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 650px)" href="/css/mobileStyle.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <title>BIRDY</title>
 </head>
 <body>
     <header>
-        <nav>
-            <img src="humming_bird.png">
-            <h1>BIRDY</h1>
-            <i id="menu_access_btn" style="font-size: 32px;line-height: 2;" class="fa fa-bars" aria-hidden="true"></i>
-            <button id="BotoxEduBtn" class="menu_option">Botox Edu.</button>
-            <button id="AppointmentsBtn" class="menu_option">Appointments</button>
-            <button id="AboutTheOwnersBtn" class="menu_option">About the Owners</button>
-            <button id="FAQBtn" class="menu_option">FAQ</button>
-        </nav>
+        <img src="humming_bird.png">
+        <h1>BIRDY</h1>
+        <i class="fa fa-angle-double-up" style="font-size: 64px; line-height: 2;"></i>
     </header>
+    <nav>
+        <i id="menu_access_btn" style="font-size: 32px; line-height: 2;" class="fa fa-bars" aria-hidden="true"></i>
+        <ul id="menu">
+            <li id="BotoxEduBtn" class="menu_option">Botox Edu.</li>
+            <li id="AppointmentsBtn" class="menu_option">Appointments</li>
+            <li id="AboutTheOwnersBtn" class="menu_option">About the Owners</li>
+            <li id="FAQBtn" class="menu_option">FAQ</li>
+        </ul>
+    </nav>
     <main>
         <article id="BotoxEduArticle">
             <h1>Botox Education</h1>
-            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
             </p>
@@ -36,7 +38,6 @@
         </article>
         <article id="AppointmentsArticle">
             <h1>Appointments</h1>
-            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
             </p>
@@ -46,7 +47,6 @@
         </article>
         <article id="TheOwnersArticle">
             <h1>The Owners</h1>
-            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
             </p>
@@ -56,7 +56,6 @@
         </article>
         <article id="FAQArticle">
             <h1>FAQ</h1>
-            <button class="mobileToTopBtn" onclick="scrollToTop()">Back to Top ^</button>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper vitae arcu quis blandit. Suspendisse ullamcorper augue quis dui rutrum, sed tempor augue ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer volutpat sodales tincidunt. Nam ornare id nisi quis dignissim. Nulla nisl nibh, euismod vitae egestas at, efficitur vitae dolor. Sed tempus blandit enim, vitae mattis nibh accumsan aliquam. Maecenas id laoreet metus, nec dapibus mi. In hac habitasse platea dictumst. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sagittis ut quam vitae pulvinar. Quisque egestas, risus et imperdiet condimentum, nibh lectus interdum massa, aliquet venenatis justo quam id ante.
             </p>

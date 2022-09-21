@@ -1,28 +1,28 @@
-let menu_state = 'open';
+let menu_state = 'closed';
 const NAV_OPTIONS = document.getElementsByClassName('menu_option')
 
 document.querySelector("#menu_access_btn").addEventListener("click", function() {
     if (menu_state == 'open') {
         console.log('closing menu...')
         menu_state = 'closed';
-        document.getElementById('menu_access_btn').classList.remove('open_menu_icon');
-        document.getElementById('menu_access_btn').classList.add('close_menu_icon');
-        document.querySelector('main').classList.add('close_menu_main');
-        document.querySelector('main').classList.remove('open_menu_main');
+        document.querySelector('#menu_access_btn').classList.remove('openMenuIcon');
+        document.querySelector('#menu_access_btn').classList.add('closeMenuIcon');
+        document.querySelector('#menu').classList.remove('openMenuUl');
+        document.querySelector('#menu').classList.add('closeMenuUl');
         for (option of NAV_OPTIONS) {
-            option.classList.add('close_menu_buttons');
-            option.classList.remove('open_menu_buttons');
+            option.classList.add('closeMenuOptions');
+            option.classList.remove('openMenuOptions');
         }
     } else {
         console.log('opening menu...')
         menu_state = 'open';
-        document.getElementById('menu_access_btn').classList.remove('close_menu_icon');
-        document.getElementById('menu_access_btn').classList.add('open_menu_icon');
-        document.querySelector('main').classList.add('open_menu_main');
-        document.querySelector('main').classList.remove('close_menu_main');
+        document.getElementById('menu_access_btn').classList.remove('closeMenuIcon');
+        document.getElementById('menu_access_btn').classList.add('openMenuIcon');
+        document.querySelector('#menu').classList.remove('closeMenuUl');
+        document.querySelector('#menu').classList.add('openMenuUl');
         for (option of NAV_OPTIONS) {
-            option.classList.add('open_menu_buttons');
-            option.classList.remove('close_menu_buttons');
+            option.classList.add('openMenuOptions');
+            option.classList.remove('closeMenuOptions');
         }
     }
 });

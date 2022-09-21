@@ -1,122 +1,89 @@
-header nav img, h1 {
-    width: 30%;
-    margin: 5%;
-    font-size: 21pt;
+header {
+    grid-template-columns: 1fr 2fr;
 }
 
-header nav i, header nav button {
-    line-height: 2;
-    background-color: var(--secondaryBackground);
+header img {
+    width: 64px;
+    margin: 10px 0;
 }
 
-.open_menu_icon {
-    animation-name: tabletNavBarOpenIcon;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.close_menu_icon {
-    animation-name: tabletNavBarCloseIcon;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.open_menu_buttons{
-    animation-name: tabletNavBarOpenButtons;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.close_menu_buttons{
-    animation-name: tabletNavBarCloseButtons;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes tabletNavBarOpenButtons {
-    from {
-        transform: scale(0%);
-    } to {
-        transform: scale(100%);
-    }
-}
-
-@keyframes tabletNavBarCloseButtons {
-    from {
-        transform: scale(100%);
-    } to {
-        transform: scale(0%);
-    }
-}
-
-@keyframes tabletNavBarOpenIcon {
-    from {
-        width: 64px;
-        border-radius: 16px;
-    } to {
-        width: 100%;
-        border-radius: 0px;
-    }
-}
-
-@keyframes tabletNavBarCloseIcon {
-    from {
-        width: 100%;
-        border-radius: 0px;
-    } to {
-        width: 64px;
-        border-radius: 16px;
-    }
-}
-
-main {
+header i {
     position: absolute;
-    width: 90%;
-    margin: 0 5%;
+    visibility: collapse;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav i {
+    background-color: var(--primaryBackground);
+    width: 64px;
     border-radius: 16px;
+    transform: rotate(0deg);
 }
 
-main article {
-    width: 80%;
-    margin: 25px 10%;
+nav ul {
+    transform: translateX(-100%);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
-main h1 {
-    font-size: 16pt;
+.openMenuIcon {
+    animation: openNavIcon .5s forwards;
 }
 
-main p {
-    font-size: 14pt;
+.closeMenuIcon {
+    animation: closeNavIcon .5s forwards;
 }
 
-.open_menu_main {
-    animation-name: tabletNavBarOpenMain;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.openMenuUl {
+    animation: openNavUl .5s forwards;
 }
 
-.close_menu_main {
-    animation-name: tabletNavBarCloseMain;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.closeMenuUl {
+    animation: closeNavUl .5s forwards;
 }
 
-@keyframes tabletNavBarOpenMain {
+@keyframes openNavUl {
     from {
-        transform: translateY(-190px);
+        transform: translateX(-100%);
     } to {
-        transform: translateY(0px);
+        transform: translateX(0%);
     }
 }
 
-@keyframes tabletNavBarCloseMain {
+@keyframes closeNavUl {
     from {
-        transform: translateY(0px);
+        transform: translateX(0%);
     } to {
-        transform: translateY(-190px);
+        transform: translateX(-100%);
     }
 }
 
-.mobileToTopBtn {
-    display: none;
+@keyframes openNavIcon {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes closeNavIcon {
+    from {
+        transform: rotate(90deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+main article h1 {
+    background-color: var(--tertiarybackground);
+    padding-left: 64px;
+}
+
+main article p {
+    padding: 0 32px;
 }

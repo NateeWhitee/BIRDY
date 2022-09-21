@@ -1,43 +1,51 @@
-header nav {
-    grid-template-columns: repeat(6, 1fr);
-    margin-bottom: 25px;
+header, nav ul {
+    height: 100px;
 }
 
-header nav img, header nav h1 {
-    grid-column: span 3;
-    padding: 5vh 0;
-    font-size: 32pt;
-    width: 60%;
+header {
+    grid-template-columns: 1fr 2fr;
+    width: 20%;
+    float: left;
 }
 
-header nav h1 {
-    background-color: var(--secondaryBackground);
-    border-radius: 25px;
+nav ul {
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-header nav i {
-    visibility: hidden;
+nav ul li {
+    width: 100%;
+    line-height: 3;
 }
 
-header nav button:hover {
-    background-color: var(--primaryBackground);
-    transition-duration: .1s;
+header img {
+    width: 64px;
+}
+
+header i, nav i {
+    position: absolute;
+    visibility: collapse;
 }
 
 main {
     width: 60%;
     margin: 0 20%;
-    border-right: solid 5px #333;
-    border-left: solid 5px #333;
-    border-top: solid 5px #333;
+    outline: 5px solid rgba(120, 85, 137, 0.5);
 }
 
 main article {
-    width: 60%;
-    margin: 0 20%;
-    padding: 25px 0;
+    width: 80%;
+    margin: 0 10%;
 }
 
-.mobileToTopBtn {
-    display: none;
+article p {
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 16px;
+}
+
+article h1 {
+    width: 80%;
+    margin: 0 10%;
+    background-color: rgba(120, 85, 137, 0.5)
 }

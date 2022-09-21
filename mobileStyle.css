@@ -1,78 +1,98 @@
-body {
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
-header nav {
+header {
     height: 100vh;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
 }
 
-header nav img, h1 {
-    grid-column: span 2;
-    font-size: 21pt;
-    width: 80%;
+header img, header h1 {
+    width: 60%;
+    margin: 0 20%;
 }
 
-header nav h1 {
-    border-bottom: solid 5px #333;
-    line-height: 3;
+header i {
+    animation: swipe 1s infinite ease-out;
 }
 
-header nav i {
-    visibility: collapse;
-    position: absolute;
-}
-
-header nav button{
-    font-size: 16pt;
-    background-color: var(--secondaryBackground);
-    border-radius: 25px;
-}
-
-header nav i {
-    grid-column: span 2;
-}
-
-main article {
-    position: absolute;
-    height: 100vh;
-    background-color: var(--foreground)
-}
-
-#AppointmentsArticle {
-    margin-top: 100vh;
-}
-#TheOwnersArticle {
-    margin-top: 200vh;
-}
-#FAQArticle {
-    margin-top: 300vh;
-}
-
-main article h1 {
-    background-color: var(--secondaryBackground);
+nav {
+    position: fixed;
+    bottom: 0;
     width: 100%;
+}
+
+nav i {
+    background-color: var(--primaryBackground);
+    width: 64px;
+    border-radius: 16px;
+}
+
+nav ul {
+    transform: translateX(-100%);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.openMenuIcon {
+    animation: openNavIcon .5s forwards;
+}
+
+.closeMenuIcon {
+    animation: closeNavIcon .5s forwards;
+}
+
+.openMenuUl {
+    animation: openNavUl .5s forwards;
+}
+
+.closeMenuUl {
+    animation: closeNavUl .5s forwards;
+}
+
+@keyframes openNavUl {
+    from {
+        transform: translateX(-100%);
+    } to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes closeNavUl {
+    from {
+        transform: translateX(0%);
+    } to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes openNavIcon {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes closeNavIcon {
+    from {
+        transform: rotate(90deg);
+    } to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes swipe {
+    from {
+        transform: translateY(0%);
+        opacity: 1;
+    } to {
+        transform: translateY(-75%);
+        opacity: 0;
+    }
+}
+
+main h1 {
     text-align: center;
-    line-height: 2;
-    border-bottom: 5px solid #333;
+    background-color: var(--tertiarybackground)
 }
 
 main article p {
-    width: 80%;
-    margin: 25px 10%;
-}
-
-.mobileToTopBtn {
-    background-color: var(--primaryBackground);
-    font-size: 18pt;
-    float: right;
-    border: 5px solid var(--special);
-    line-height: 1.5;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    padding: 0 10px;
-    cursor: pointer;
-    transform: translateX(5px);
+    width: 90%;
+    margin: 0 5%;
 }
