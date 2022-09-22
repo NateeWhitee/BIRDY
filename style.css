@@ -3,7 +3,7 @@
     --tertiarybackground: rgba(120, 85, 137, 0.5);
     --secondaryBackground: #6A79FF;
     --primaryBackground: #B9D4FF;
-    --special: #f2545b;
+    --special: rgba(242, 84, 92, 0.75);
 }
 
 * {
